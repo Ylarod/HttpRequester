@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">DevTools</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">HTTP Requester</string>
+    <string name="menu_tcp_client">TCP Client</string>
+    <string name="menu_tcp_server">TCP Server</string>
+    <string name="menu_bluetooth">Bluetooth</string>
+    <string name="menu_nfc" translatable="false">NFC</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string name="positive_btn">OK</string>
+    <string name="negative_btn">Cancel</string>
+
+    <string name="protocol">Protocol</string>
+    <string name="protocol_options">Protocol Options</string>
+    <string name="HTTP_1_0" translatable="false">HTTP/1.0</string>
+    <string name="HTTP_1_1" translatable="false">HTTP/1.1</string>
+    <string name="HTTP_2_0" translatable="false">HTTP/2.0</string>
+
+    <string name="method">Method</string>
+    <string name="method_options">Method Options</string>
+    <string name="method_get" translatable="false">GET</string>
+    <string name="method_head" translatable="false">HEAD</string>
+    <string name="method_post" translatable="false">POST</string>
+    <string name="method_put" translatable="false">PUT</string>
+    <string name="method_delete" translatable="false">DELETE</string>
+    <string name="method_connect" translatable="false">CONNECT</string>
+    <string name="method_trace" translatable="false">TRACE</string>
+    <string name="method_patch" translatable="false">PATCH</string>
+
+    <string name="url">URL</string>
+    <string name="url_options">URL Options</string>
+    <string name="ylarod_blog_url">https://xtuly.cn</string>
+    <string name="parameter">URL Parameters</string>
+    <string name="add_item">＋ Add</string>
+    <string name="headers">Headers</string>
+    <string name="response">Response</string>
+    <string name="request">Request</string>
+    <string name="send">SEND</string>
+    <string name="connect">CONNECT</string>
+    <string name="settings">SETTINGS</string>
+
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/nav_http">
+
+    <fragment
+        android:id="@+id/nav_http"
+        android:name="cn.ylarod.devtools.ui.main.http.HttpFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_http" >
+        <action
+            android:id="@+id/action_nav_http_to_nav_http_edit_parameter"
+            app:destination="@id/nav_http_edit_parameter" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tcp_client"
+        android:name="cn.ylarod.devtools.ui.main.tcp_client.TcpClientFragment"
+        android:label="@string/menu_tcp_client"
+        tools:layout="@layout/fragment_tcp_client" />
+
+    <fragment
+        android:id="@+id/nav_tcp_server"
+        android:name="cn.ylarod.devtools.ui.main.tcp_server.TcpServerFragment"
+        android:label="@string/menu_tcp_server"
+        tools:layout="@layout/fragment_tcp_server" />
+</navigation>

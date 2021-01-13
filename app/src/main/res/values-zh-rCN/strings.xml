@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DevTools</string>
+    <string name="navigation_drawer_open">打开侧栏</string>
+    <string name="navigation_drawer_close">关闭侧栏</string>
+    <string name="nav_header_title">安卓 Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation 标题</string>
+    <string name="action_settings">设置</string>
+
+    <string name="menu_home">HTTP 请求</string>
+    <string name="menu_tcp_client">TCP 客户端</string>
+    <string name="menu_tcp_server">TCP 服务器</string>
+
+    <string name="protocol">协议</string>
+</resources>
