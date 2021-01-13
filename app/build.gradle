@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "cn.ylarod.devtools"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -49,6 +49,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    implementation 'com.ejlchina:okhttps:2.5.0'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'

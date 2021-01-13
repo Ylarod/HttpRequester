@@ -3,6 +3,7 @@ package cn.ylarod.devtools.core.db.entity;
 import androidx.room.ColumnInfo;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.ylarod.devtools.core.model.HttpResponseModel;
 
@@ -10,7 +11,7 @@ public class HttpResponseEntity implements HttpResponseModel {
     public String code;
     public String message;
     @ColumnInfo(name = "response_headers")
-    public List<KeyValuePair> headers;
+    public Map<String,String> headers;
     @ColumnInfo(name = "response_content")
     public String content;
 
@@ -25,7 +26,7 @@ public class HttpResponseEntity implements HttpResponseModel {
     }
 
     @Override
-    public List<KeyValuePair> getHeaders() {
+    public Map<String,String> getHeaders() {
         return headers;
     }
 

@@ -32,26 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
         setSupportActionBar(binding.toolbar);
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(binding.navHostFragment.getId());
         assert navHostFragment != null;
         navController = navHostFragment.getNavController();
-        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            if(destination.getId() == R.id.nav_http){
-                binding.btnConnect.setVisibility(View.INVISIBLE);
-            }else if(destination.getId() == R.id.nav_tcp_client){
-                binding.btnConnect.setVisibility(View.VISIBLE);
-            }else if(destination.getId() == R.id.nav_tcp_server){
-                binding.btnConnect.setVisibility(View.VISIBLE);
-            }
-        });
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_http,R.id.nav_tcp_client,R.id.nav_tcp_server).setOpenableLayout(binding.drawerLayout).build();
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);

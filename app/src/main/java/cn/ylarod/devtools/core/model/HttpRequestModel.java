@@ -1,15 +1,11 @@
 package cn.ylarod.devtools.core.model;
 
-import java.util.List;
-
-import cn.ylarod.devtools.core.db.entity.KeyValuePair;
+import java.util.Map;
 
 public interface HttpRequestModel {
-    void setProtocol(String protocol);
     void setMethod(String method);
     void setUrl(String url);
-    void setParameters(List<KeyValuePair> parameters);
-    void setHeaders(List<KeyValuePair> headers);
-    void setContentType(String contentType);
-    void setContent(String content);
+    void setParameters(Map<String,String> parameters);
+    void setHeaders(Map<String,String> headers);
+    void setBody(String content);
 }

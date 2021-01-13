@@ -1,12 +1,10 @@
 package cn.ylarod.devtools.core.model;
 
-import java.util.List;
-
-import cn.ylarod.devtools.core.db.entity.KeyValuePair;
+import java.util.Map;
 
 public interface HttpResponseModel {
     String getCode();
     String getMessage();
-    List<KeyValuePair> getHeaders();
+    Map<String,String> getHeaders();
     String getContent();
 }

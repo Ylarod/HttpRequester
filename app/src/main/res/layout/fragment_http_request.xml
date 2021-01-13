@@ -21,39 +21,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:id="@+id/textViewHttpProtocol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/protocol"
-                    android:textColor="@color/text_hint"
-                    android:textSize="16sp"
-                    android:layout_marginStart="15dp"/>
-
-                <TextView
-                    android:id="@+id/buttonHttpProtocol"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/HTTP_2_0"
-                    android:textColor="@color/text_content"
-                    android:textSize="13sp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:background="?attr/selectableItemBackground"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp">
 
                 <TextView

@@ -3,25 +3,18 @@ package cn.ylarod.devtools.core.db.entity;
 import androidx.room.ColumnInfo;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.ylarod.devtools.core.model.HttpRequestModel;
 
 public class HttpRequestEntity implements HttpRequestModel {
-    public String protocol;
     public String method;
     public String url;
-    public List<KeyValuePair> parameters;
+    public Map<String,String> parameters;
     @ColumnInfo(name = "request_headers")
-    public List<KeyValuePair> headers;
-    @ColumnInfo(name = "request_content_type")
-    public String contentType;
-    @ColumnInfo(name = "request_content")
-    public String content;
-
-    @Override
-    public void setProtocol(String protocol) {
-        this.protocol = protocol;
-    }
+    public Map<String,String> headers;
+    @ColumnInfo(name = "request_body")
+    public String body;
 
     @Override
     public void setMethod(String method) {
@@ -34,22 +27,17 @@ public class HttpRequestEntity implements HttpRequestModel {
     }
 
     @Override
-    public void setParameters(List<KeyValuePair> parameters) {
+    public void setParameters(Map<String,String> parameters) {
         this.parameters = parameters;
     }
 
     @Override
-    public void setHeaders(List<KeyValuePair> headers) {
+    public void setHeaders(Map<String,String> headers) {
         this.headers = headers;
     }
 
     @Override
-    public void setContentType(String contentType) {
-        this.contentType = contentType;
-    }
-
-    @Override
-    public void setContent(String content) {
-        this.content = content;
+    public void setBody(String content) {
+        this.body = content;
     }
 }

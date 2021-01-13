@@ -26,19 +26,18 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
-import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.List;
 
 import cn.ylarod.devtools.core.AppExecutors;
 import cn.ylarod.devtools.core.db.conventer.DateConverter;
-import cn.ylarod.devtools.core.db.conventer.KeyValueConverter;
+import cn.ylarod.devtools.core.db.conventer.MapConverter;
 import cn.ylarod.devtools.core.db.dao.HttpDao;
 import cn.ylarod.devtools.core.db.entity.HttpEntity;
 
 @Database(entities = {HttpEntity.class}, version = 1, exportSchema = false)
-@TypeConverters({DateConverter.class, KeyValueConverter.class})
+@TypeConverters({DateConverter.class, MapConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase sInstance;

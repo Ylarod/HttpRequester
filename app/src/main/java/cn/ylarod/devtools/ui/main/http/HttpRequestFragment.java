@@ -26,8 +26,7 @@ public class HttpRequestFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentHttpRequestBinding.inflate(inflater, container, false);
-        httpRequestViewModel = new ViewModelProvider(this).get(HttpRequestViewModel.class);
-        httpRequestViewModel.getProtocol().observe(getViewLifecycleOwner(), protocol -> binding.buttonHttpProtocol.setText(protocol));
+        httpRequestViewModel = new ViewModelProvider(requireParentFragment()).get(HttpRequestViewModel.class);
         httpRequestViewModel.getMethod().observe(getViewLifecycleOwner(), method -> binding.buttonHttpMethod.setText(method));
         httpRequestViewModel.getUrl().observe(getViewLifecycleOwner(), url -> binding.buttonHttpUrl.setText(url));
         return binding.getRoot();
@@ -35,22 +34,8 @@ public class HttpRequestFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        binding.buttonHttpProtocol.setOnClickListener(v -> showProtocolDialog(requireContext()));
         binding.buttonHttpMethod.setOnClickListener(v -> showMethodDialog(requireContext()));
         binding.buttonHttpUrl.setOnClickListener(v -> showUrlDialog(requireContext()));
-        binding.buttonHttpParameterAdd.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_nav_http_to_nav_http_edit_parameter));
-    }
-
-    private void showProtocolDialog(Context context) {
-        final String[] protocols = {
-                context.getString(R.string.HTTP_1_0),
-                context.getString(R.string.HTTP_1_1),
-                context.getString(R.string.HTTP_2_0)
-        };
-        AlertDialog.Builder listDialog = new AlertDialog.Builder(context);
-        listDialog.setTitle(R.string.method_options);
-        listDialog.setItems(protocols, (dialog, which) -> httpRequestViewModel.setProtocol(protocols[which]));
-        listDialog.show();
     }
 
     private void showMethodDialog(Context context) {
@@ -60,7 +45,6 @@ public class HttpRequestFragment extends Fragment {
                 context.getString(R.string.method_post),
                 context.getString(R.string.method_put),
                 context.getString(R.string.method_delete),
-                context.getString(R.string.method_connect),
                 context.getString(R.string.method_trace),
                 context.getString(R.string.method_patch)
         };

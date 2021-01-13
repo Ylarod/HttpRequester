@@ -5,26 +5,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_http"
-            android:icon="@drawable/ic_menu_http"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_history"
+            android:title="@string/history" />
         <item
-            android:id="@+id/nav_tcp_client"
-            android:icon="@drawable/ic_menu_client"
-            android:title="@string/menu_tcp_client" />
-        <item
-            android:id="@+id/nav_tcp_server"
-            android:icon="@drawable/ic_menu_server"
-            android:title="@string/menu_tcp_server" />
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
 
-        <item
-            android:id="@+id/nav_bluetooth"
-            android:icon="@drawable/ic_menu_bluetooth"
-            android:title="@string/menu_bluetooth" />
-
-        <item
-            android:id="@+id/nav_nfc"
-            android:icon="@drawable/ic_menu_nfc"
-            android:title="@string/menu_nfc" />
     </group>
 </menu>

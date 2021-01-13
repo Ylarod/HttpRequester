@@ -35,12 +35,12 @@
     <string name="method_post" translatable="false">POST</string>
     <string name="method_put" translatable="false">PUT</string>
     <string name="method_delete" translatable="false">DELETE</string>
-    <string name="method_connect" translatable="false">CONNECT</string>
     <string name="method_trace" translatable="false">TRACE</string>
     <string name="method_patch" translatable="false">PATCH</string>
 
     <string name="url">URL</string>
     <string name="url_options">URL Options</string>
+    <string name="url_not_empty">URL Cannot be empty!</string>
     <string name="ylarod_blog_url">https://xtuly.cn</string>
     <string name="parameter">URL Parameters</string>
     <string name="add_item">＋ Add</string>
@@ -50,6 +50,7 @@
     <string name="send">SEND</string>
     <string name="connect">CONNECT</string>
     <string name="settings">SETTINGS</string>
+    <string name="history">HISTORY</string>
 
 
 </resources>

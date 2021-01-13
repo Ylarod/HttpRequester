@@ -10,9 +10,6 @@
         android:name="cn.ylarod.devtools.ui.main.http.HttpFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_http" >
-        <action
-            android:id="@+id/action_nav_http_to_nav_http_edit_parameter"
-            app:destination="@id/nav_http_edit_parameter" />
     </fragment>
 
     <fragment

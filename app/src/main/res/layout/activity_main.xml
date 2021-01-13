@@ -24,41 +24,6 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/Theme.DevTools.PopupOverlay" >
-
-                <ImageButton
-                    android:id="@+id/btn_setting"
-                    style="@style/Base.Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"
-                    android:layout_gravity="end"
-                    app:srcCompat="@drawable/ic_settings"
-                    android:contentDescription="@string/settings" />
-
-                <ImageButton
-                    android:id="@+id/btn_history"
-                    style="@style/Base.Widget.AppCompat.Button.Borderless"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"
-                    android:layout_gravity="end"
-                    android:src="@drawable/ic_history"
-                    android:contentDescription="@string/connect" />
-
-                <ImageButton
-                    android:id="@+id/btn_connect"
-                    style="@style/Base.Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"
-                    android:layout_gravity="end"
-                    android:visibility="invisible"
-                    android:src="@mipmap/icon_connect"
-                    android:contentDescription="@string/connect" />
-
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -81,15 +46,6 @@
                 app:navGraph="@navigation/nav_graph" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_send"
-            android:contentDescription="@string/send" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
