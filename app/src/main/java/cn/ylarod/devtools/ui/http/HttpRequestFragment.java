@@ -66,7 +66,6 @@ public class HttpRequestFragment extends Fragment {
             binding.headerValueEditText.setText(keyValuePair.getValue());
         });
         binding.headerListView.setOnItemLongClickListener((parent, v, position, id) -> {
-            KeyValuePair keyValuePair = headers.get(position);
             new AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.delete_header))
                     .setMessage(getString(R.string.delete_header_question))
@@ -133,7 +132,6 @@ public class HttpRequestFragment extends Fragment {
             binding.parameterValueEditText.setText(keyValuePair.getValue());
         });
         binding.parameterListView.setOnItemLongClickListener((parent, v, position, id) -> {
-            KeyValuePair keyValuePair = parameters.get(position);
             new AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.delete_parameter))
                     .setMessage(getString(R.string.delete_parameter_question))
@@ -193,34 +191,22 @@ public class HttpRequestFragment extends Fragment {
             parametersListAdapter.notifyDataSetChanged();
             setListViewHeightBasedOnChildren(binding.parameterListView);
         });
-//        binding.buttonHttpParameterClean.setOnClickListener(v -> binding.parameters.setText(""));
     }
 
 
     public static void setListViewHeightBasedOnChildren(ListView listView) {
-        // 获取ListView对应的Adapter
         Adapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {
             return;
         }
-
         int totalHeight = 0;
         for (int i = 0, len = listAdapter.getCount(); i < len; i++) {
-            // listAdapter.getCount()返回数据项的数目
             View listItem = listAdapter.getView(i, null, listView);
-            // 计算子项View 的宽高
             listItem.measure(0, 0);
-            // 统计所有子项的总高度
             totalHeight += listItem.getMeasuredHeight();
         }
-
         ViewGroup.LayoutParams params = listView.getLayoutParams();
-
-        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount()))
-                + listView.getListPaddingBottom() + listView.getListPaddingTop();
-        // listView.getDividerHeight()获取子项间分隔符占用的高度
-        // listView.getListPaddingBottom()获取ListView的内边距
-        // params.height最后得到整个ListView完整显示需要的高度
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount())) + listView.getListPaddingBottom() + listView.getListPaddingTop();
         listView.setLayoutParams(params);
     }
 

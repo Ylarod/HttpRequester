@@ -142,16 +142,32 @@
                                 android:hint="@string/value" />
                         </LinearLayout>
 
-                        <Button
+<!--                        <Button-->
+<!--                            android:id="@+id/parameter_add_button"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:paddingStart="10dp"-->
+<!--                            android:paddingTop="10dp"-->
+<!--                            android:paddingEnd="10dp"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:text="@string/add" />-->
+
+                        <TextView
                             android:id="@+id/parameter_add_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:paddingStart="10dp"
-                            android:paddingTop="10dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="10dp"
-                            android:text="@string/add" />
+                            android:layout_marginTop="5dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/add_item"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_hint"
+                            android:textSize="18sp" />
                     </RelativeLayout>
 
                     <include
@@ -226,16 +242,32 @@
                                 android:hint="@string/value" />
                         </LinearLayout>
 
-                        <Button
+<!--                        <Button-->
+<!--                            android:id="@+id/header_add_button"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:paddingStart="10dp"-->
+<!--                            android:paddingTop="10dp"-->
+<!--                            android:paddingEnd="10dp"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:text="Add" />-->
+
+                        <TextView
                             android:id="@+id/header_add_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:paddingStart="10dp"
-                            android:paddingTop="10dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="10dp"
-                            android:text="Add" />
+                            android:layout_marginTop="5dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/add_item"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_hint"
+                            android:textSize="18sp" />
                     </RelativeLayout>
 
                     <include

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class HttpRequestViewModel extends ViewModel {
@@ -19,8 +20,9 @@ public class HttpRequestViewModel extends ViewModel {
         url = new MutableLiveData<>();
         url.setValue("");
         parameters = new MutableLiveData<>();
-        headers= new MutableLiveData<>();
-
+        parameters.setValue(new HashMap<>());
+        headers = new MutableLiveData<>();
+        headers.setValue(new HashMap<>());
     }
 
     public LiveData<String> getMethod() {

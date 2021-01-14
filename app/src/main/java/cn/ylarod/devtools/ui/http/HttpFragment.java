@@ -11,8 +11,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.ejlchina.okhttps.HTTP;
+import com.ejlchina.okhttps.internal.HttpException;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import cn.ylarod.devtools.R;
 import cn.ylarod.devtools.databinding.FragmentHttpBinding;
 
 public class HttpFragment extends Fragment {
@@ -53,26 +56,34 @@ public class HttpFragment extends Fragment {
             HttpRequestViewModel httpRequestViewModel = new ViewModelProvider(this).get(HttpRequestViewModel.class);
             HttpResponseViewModel httpResponseViewModel = new ViewModelProvider(this).get(HttpResponseViewModel.class);
             if(!httpRequestViewModel.getUrl().getValue().equalsIgnoreCase("")){
-                if(httpRequestViewModel.getMethod().getValue().equals("GET")){
-                    HTTP http = HTTP.builder().build();
-                    http.async(httpRequestViewModel.getUrl().getValue())
-                        .addUrlPara(httpRequestViewModel.getParameters().getValue())
-                        .addHeader(httpRequestViewModel.getHeaders().getValue())
-                            .setOnResString(httpResponseViewModel::setData)
-                            .get();
+                try {
+                    if(httpRequestViewModel.getMethod().getValue().equals("GET")){
+                        HTTP http = HTTP.builder().build();
+                        http.async(httpRequestViewModel.getUrl().getValue())
+                                .addUrlPara(httpRequestViewModel.getParameters().getValue())
+                                .addHeader(httpRequestViewModel.getHeaders().getValue())
+                                .setOnResString(httpResponseViewModel::setData)
+                                .get();
 
-                }else{
-                    HTTP http = HTTP.builder().build();
-                    http.async(httpRequestViewModel.getUrl().getValue())
-                        .addBodyPara(httpRequestViewModel.getParameters().getValue())
-                        .addHeader(httpRequestViewModel.getHeaders().getValue())
-                            .setOnResString(httpResponseViewModel::setData)
-                            .post();
+                    }else{
+                        HTTP http = HTTP.builder().build();
+                        http.async(httpRequestViewModel.getUrl().getValue())
+                                .addBodyPara(httpRequestViewModel.getParameters().getValue())
+                                .addHeader(httpRequestViewModel.getHeaders().getValue())
+                                .setOnResString(httpResponseViewModel::setData)
+                                .post();
+                    }
+                    binding.httpViewPager.setCurrentItem(1);
+                }catch (HttpException httpException){
+                    Snackbar.make(v, R.string.alert_http_error,Snackbar.LENGTH_SHORT).show();
                 }
+
+            }else{
+                Snackbar.make(v, R.string.alert_type_url,Snackbar.LENGTH_SHORT).show();
             }
             
 
-            binding.httpViewPager.setCurrentItem(1);
+
         });
 
         return binding.getRoot();
