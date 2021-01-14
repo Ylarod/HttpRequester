@@ -1,13 +1,21 @@
 # Compile Environment
 
 System: Arch Linux x86_64
+
 IDE: Android Studio 4.1.1
+
 Current Desktop: KDE
+
 Gradle Plugin Version: 4.1.1
+
 Gradle Version: 6.5
+
 Compile SDK: 30
+
 Build Tool Version: 30.0.1
+
 Java Version: openjdk version "11.0.8" 2020-07-14
+
 Dependencies:
  ```
  dependencies {
