@@ -1,10 +1,8 @@
-package cn.ylarod.devtools.ui.main.http;
+package cn.ylarod.devtools.ui.http;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
-import java.util.Map;
 
 public class HttpResponseViewModel  extends ViewModel {
     private final MutableLiveData<String> data;

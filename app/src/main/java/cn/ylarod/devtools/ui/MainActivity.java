@@ -1,4 +1,4 @@
-package cn.ylarod.devtools.ui.main;
+package cn.ylarod.devtools.ui;
 
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_http,R.id.nav_tcp_client,R.id.nav_tcp_server).setOpenableLayout(binding.drawerLayout).build();
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
     }
 
     @Override

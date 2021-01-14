@@ -1,4 +1,4 @@
-package cn.ylarod.devtools.ui.main.http;
+package cn.ylarod.devtools.ui.http;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

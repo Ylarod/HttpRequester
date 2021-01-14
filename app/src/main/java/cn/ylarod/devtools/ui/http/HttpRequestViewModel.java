@@ -1,10 +1,9 @@
-package cn.ylarod.devtools.ui.main.http;
+package cn.ylarod.devtools.ui.http;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.List;
 import java.util.Map;
 
 public class HttpRequestViewModel extends ViewModel {
@@ -40,19 +39,19 @@ public class HttpRequestViewModel extends ViewModel {
         this.url.postValue(url);
     }
 
-    public LiveData<Map<String,String> > getParameters() {
+    public LiveData<Map<String,String>> getParameters() {
         return parameters;
     }
 
-    public void setParameters(Map<String,String>  parameters) {
+    public void setParameters(Map<String,String> parameters) {
         this.parameters.postValue(parameters);
     }
 
-    public LiveData<Map<String,String> > getHeaders() {
+    public LiveData<Map<String,String>> getHeaders() {
         return headers;
     }
 
-    public void setHeaders(Map<String,String>  headers) {
+    public void setHeaders(Map<String,String> headers) {
         this.headers.postValue(headers);
     }
 
