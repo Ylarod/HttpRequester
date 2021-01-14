@@ -3,8 +3,8 @@
     <string name="app_name">DevTools</string>
     <string name="navigation_drawer_open">打开侧栏</string>
     <string name="navigation_drawer_close">关闭侧栏</string>
-    <string name="nav_header_title">安卓 Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">DevTools</string>
+    <string name="nav_header_subtitle">me@ylarod.cn</string>
     <string name="nav_header_desc">Navigation 标题</string>
     <string name="action_settings">设置</string>
 
@@ -12,5 +12,29 @@
     <string name="menu_tcp_client">TCP 客户端</string>
     <string name="menu_tcp_server">TCP 服务器</string>
 
+    <string name="positive_btn">确认</string>
+    <string name="negative_btn">取消</string>
+
     <string name="protocol">协议</string>
+
+    <string name="method">方法</string>
+    <string name="method_options">方法设置</string>
+
+    <string name="url">URL</string>
+    <string name="url_options">URL 设置</string>
+    <string name="url_not_empty">URL Cannot be empty!</string>
+    <string name="ylarod_blog_url">https://xtuly.cn</string>
+    <string name="parameter">URL 参数</string>
+    <string name="add_item">添加</string>
+    <string name="headers">Headers</string>
+    <string name="response">Response</string>
+    <string name="request">Request</string>
+    <string name="add">添加</string>
+    <string name="delete_header">协议头删除</string>
+    <string name="delete_header_question">确认删除该协议头?</string>
+    <string name="delete_parameter">参数删除</string>
+    <string name="delete_parameter_question">确认删除该参数吗?</string>
+    <string name="alert_type_key_value">请同时输入Key和Value.</string>
+    <string name="alert_type_url">请输入URL.</string>
+    <string name="alert_http_error">Http Error.</string>
 </resources>

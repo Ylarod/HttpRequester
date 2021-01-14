@@ -13,17 +13,12 @@
     <string name="menu_bluetooth">Bluetooth</string>
     <string name="menu_nfc" translatable="false">NFC</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
 
     <string name="positive_btn">OK</string>
     <string name="negative_btn">Cancel</string>
 
     <string name="protocol">Protocol</string>
-    <string name="protocol_options">Protocol Options</string>
+    <string name="protocol_options" translatable="false">Protocol Options</string>
     <string name="HTTP_1_0" translatable="false">HTTP/1.0</string>
     <string name="HTTP_1_1" translatable="false">HTTP/1.1</string>
     <string name="HTTP_2_0" translatable="false">HTTP/2.0</string>
@@ -42,16 +37,15 @@
     <string name="headers">Headers</string>
     <string name="response">Response</string>
     <string name="request">Request</string>
-    <string name="send">SEND</string>
-    <string name="connect">CONNECT</string>
-    <string name="settings">SETTINGS</string>
-    <string name="history">HISTORY</string>
-    <string name="key">Key</string>
-    <string name="value">Value</string>
+    <string name="send" translatable="false">SEND</string>
+    <string name="connect" translatable="false">CONNECT</string>
+    <string name="settings" translatable="false">SETTINGS</string>
+    <string name="history" translatable="false">HISTORY</string>
+    <string name="key" translatable="false">Key</string>
+    <string name="value" translatable="false">Value</string>
     <string name="add">Add</string>
     <string name="delete_header">Delete Header</string>
     <string name="delete_header_question">Do you want to delete this header?</string>
-    <string name="delete_header_question_2">\10Value: </string>
     <string name="delete_parameter">Delete Parameter</string>
     <string name="delete_parameter_question">Do you want to delete this parameter?</string>
     <string name="alert_type_key_value">Please type both the Key and Value before adding.</string>

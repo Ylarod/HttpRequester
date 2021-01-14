@@ -152,7 +152,6 @@
 <!--                            android:paddingEnd="10dp"-->
 <!--                            android:paddingBottom="10dp"-->
 <!--                            android:text="@string/add" />-->
-
                         <TextView
                             android:id="@+id/parameter_add_button"
                             android:layout_width="wrap_content"
